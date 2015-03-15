@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    _page.scss
+\*------------------------------------*/
+/**
+ *
+ * page level reset and styling
+ *
+ * =layout.........base layout
+ * =page...........page overrides
+ *
+ */
+
+/**
+ * =layout
+ */
+body {
+    @extend .extd-naked;
+    @extend .extd-basefontstyle;
+    @include font-size($base-font-size, false);
+    background-position: center 100%;
+    overflow-y:hidden;
+    .grid {
+        margin: 0 !important;
+        .grid__item {
+            @extend .extd-naked;
+        }
+    }
+}
+
+.layout-centered {
+    @extend .extd-centered;
+    background:none transparent;
+    max-width: map-get($map-dimensions, max-width);
+    min-width: map-get($map-dimensions, min-width);
+    position:relative;
+    @include media-query(desk) {
+        margin:0 auto;
+    }
+    @include media-query(lap) {
+        margin:0 auto;
+    }
+    @include media-query(palm) {
+        margin:0;
+    }
+}
+
+.layout-full {
+    @extend .extd-naked;
+    width:100%;
+}
+
+.gutter {
+    padding:0 20px;
+}
+
+/**
+ * =page
+ */
+html {
+    background:none map-get($map-colors, white);
+    color: map-get($map-colors, black);
+    font:1em/1.5 Helvetica, Arial, sans-serif;
+    padding:0;
+}
+
+.bg--black {
+    background:none map-get($map-colors, black);
+}
+
+.bg--white {
+    background:none map-get($map-colors, white);
+}

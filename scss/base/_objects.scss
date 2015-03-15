@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    _objects.scss
+\*------------------------------------*/
+/**
+ *
+ * object level reset and styling
+ *
+ * =lists.............base lists
+ * =media.............base media objects
+ * =paragraphs........base paragraphs
+ *
+ */
+
+/**
+ * =lists
+ */
+ul, ol, dl {
+    @extend .extd-naked;
+    list-style-type:none;
+    li {
+        @extend .extd-naked;
+    }
+}
+
+/**
+ * =media
+ */
+img, .img {
+    max-width: 100%;
+}
+
+figure {
+    @extend .extd-naked;
+    display:block;
+    text-align:center;
+    >img {
+        display:inline-block;
+    }
+    figcaption {
+        display:block;
+    }
+}
+
+/**
+ * =paragraphs
+ */
+p, .p {
+    @extend .extd-naked;
+    @include font-size($base-font-size, false);
+}
+
+sup {
+    @extend .p;
+    @include font-size($base-font-size*0.5, false);
+}
+
+sub {
+    @extend .p;
+    @include font-size($base-font-size*0.5, false);
+}

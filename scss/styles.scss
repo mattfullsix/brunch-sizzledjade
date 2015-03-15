@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    styles.scss
+\*------------------------------------*/
+/**
+ *
+ * compile this file using Ruby / Sublime / Grunt
+ * from parent directory :
+ * sass --watch --sourcemap scss/styles.scss:public/css/styles.min.css --style compressed
+ *
+ */
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "../bower_components/inuit.css/inuit";
+
+/**
+ * Custom - base
+ */
+@import "base/utils";
+@import "base/fonts";
+@import "base/page";
+@import "base/objects";
+@import "base/animations";
+
+/**
+ * Custom - transverse
+ */
+
+
+/**
+ * Custom - blocks
+ */

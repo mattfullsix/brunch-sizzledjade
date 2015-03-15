@@ -1,0 +1,22 @@
+{
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "name": "brunch-sizzledjade",
+            "path": "."
+        },
+        {
+            "folder_exclude_patterns":
+            [
+                ".sass-cache"
+            ],
+            "follow_symlinks": true,
+            "path": ""
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 2
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "basic-brunch",
+  "version": "1.0.0",
+  "description": "basic brunch skeleton",
+  "main": "app/main.js",
+  "license": "BSD",
+  "repository": "https://github.com/mattfullsix/brunch-sizzledjade.git",
+  "authors": [
+    "mattfullsix <elmoujot@hotmail.com>"
+  ],
+  "directories": {
+    "app": "app",
+    "scss": "scss",
+    "vendor": "vendor",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "keywords": [
+    "Brunch",
+    "Skeleton"
+  ],
+  "dependencies": {
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "jaded-brunch": "^1.7.13",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "sass-brunch": "^1.8.9",
+    "uglify-js-brunch": ">= 1.0 < 1.8"
+  }
+}

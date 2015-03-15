@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    _animations.scss
+\*------------------------------------*/
+/**
+ *
+ * Generic css3 animation mixins
+ *
+ * =transition...............generic transition mixin
+ * =animation................generic animation mixin
+ *
+ */
+
+/**
+ * =transition
+ * $values: <transition-property> <transition-duration> <transition-timing-function> <transition-delay>
+ * Add more shorthands separated by comma in $values, MUST wrap it in quotes !
+ */
+@mixin transition-shorthand($values){ //$property, $duration, $timing, $delay){
+
+    $property: transition;
+
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+      #{$prefix}#{$property}: $values;
+    }
+}
+
+/*
+* =animation
+* @include animation : generic, all-purpose css3 mixin
+*/
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+  // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+  -webkit-animation: $name $duration $iterations $timing-function $delay;
+  -moz-animation: $name $duration $iterations $timing-function $delay;
+  -o-animation: $name $duration $iterations $timing-function $delay;
+  animation: $name $duration $iterations $timing-function $delay;
+}
+
+@mixin transition-duration($duration) {
+  -webkit-transition-duration:        $duration;
+  -moz-transition-duration:           $duration;
+  -o-transition-duration:           $duration;
+  -ms-transition-duration:            $duration;
+  transition-duration:            $duration;
+}
+
+@mixin origin($hor, $ver) {
+  -webkit-transform-origin:     $hor $ver;
+  -moz-transform-origin:        $hor $ver;
+  -o-transform-origin:          $hor $ver;
+  -ms-transform-origin:         $hor $ver;
+  transform-origin:             $hor $ver;
+}
+
+@mixin scaleY($val) {
+  -webkit-transform:      scaleY($val);
+  -moz-transform:         scaleY($val);
+  -o-transform:           scaleY($val);
+  -ms-transform:          scaley($val);
+  transform:              scaleY($val);
+}
+
+@mixin scaleX($val) {
+  -webkit-transform:      scaleX($val);
+  -moz-transform:         scaleX($val);
+  -o-transform:           scaleX($val);
+  -ms-transform:          scaleX($val);
+  transform:              scaleX($val);
+}

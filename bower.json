@@ -1,0 +1,22 @@
+{
+  "name": "basic-brunch",
+  "description": "basic-brunch",
+  "version": "1.0.0",
+  "main": "app/main.js",
+  "license": "BSD",
+  "repository": "https://github.com/mattfullsix/brunch-sizzledjade.git",
+  "authors": [
+    "mattfullsix <elmoujot@hotmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Brunch"
+  ],
+  "dependencies": {
+    "inuit.css": "~5.0.0",
+    "modernizr": "~2.8.3",
+    "sizzle": "~2.1.1"
+  }
+}
