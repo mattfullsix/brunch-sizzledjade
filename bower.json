@@ -2,7 +2,7 @@
   "name": "basic-brunch",
   "description": "basic-brunch",
   "version": "1.0.0",
-  "main": "app/main.js",
+  "main": "public/main.js",
   "license": "BSD",
   "repository": "https://github.com/mattfullsix/brunch-sizzledjade.git",
   "authors": [

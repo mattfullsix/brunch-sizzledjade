@@ -1,24 +1,41 @@
 exports.config =
-  plugins:
-    sass:
-      mode: 'ruby'
-      options: ['--style compressed']
 
   paths:
     public: 'public'
-    watched: ['app', 'scss']
+    watched: ['app', 'scss', 'vendor']
 
-  skip_files: []
   modules:
     wrapper: 'commonjs'
     definition: 'commonjs'
+
+  skip_files: []
 
   files:
     javascripts:
       joinTo:
         'js/main.js': /^app/
+        'js/vendor/vendor.js': /^vendor/
+      order:
+        before: []
 
     stylesheets:
       defaultExtension: 'scss'
       joinTo:
         'css/styles.min.css': /^scss/
+      order:
+        before: []
+
+    templates:
+      joinTo: 'js/template.js'
+
+  plugins:
+    sass:
+      mode: 'ruby'
+      options: ['--style compressed']
+
+    jade:
+      options:
+        pretty: true
+
+      static_jade:
+        extension: ".static.jade"
